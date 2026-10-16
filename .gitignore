@@ -1,0 +1,33 @@
+# --- Secrets ---
+# DASHBOARD_TOKEN authorizes live order placement. Never commit this.
+.env
+.env.*
+!.env.example
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+
+# --- Analytics store ---
+# Re-downloadable from IBKR and grows with history; not source.
+analytics/*.db
+
+# --- Saved watchlist ---
+# Your curated ticker list and its temp file — user state, not source.
+watchlist.json
+watchlist.json.tmp
+
+# --- Trade history store ---
+# Your own executions and realized PnL. Not source, and not for sharing.
+trade_history.db
+*.sqlite
+*.sqlite3
+
+# --- macOS ---
+.DS_Store
+
+# --- Editor ---
+.vscode/

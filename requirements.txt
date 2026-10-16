@@ -1,0 +1,18 @@
+# Requires Python >= 3.10 (fastapi, uvicorn and ib_async all floor there).
+#   python3 -m venv .venv && source .venv/bin/activate
+#   pip install -r requirements.txt
+
+# --- Web layer ---
+fastapi==0.141.1
+uvicorn==0.52.4
+
+pydantic==2.13.5
+
+# --- Broker ---
+# 2.x is API-compatible with what server.py uses (IB, Stock, MarketOrder,
+# LimitOrder, OrderStatus, util.patchAsyncio and the 17 IB methods called here).
+ib_async==2.1.0
+
+# --- Optional: reads .env at startup. server.py guards the import, so the app
+# runs without it and falls back to plain environment variables. ---
+python-dotenv==1.2.3
